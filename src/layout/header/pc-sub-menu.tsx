@@ -14,14 +14,8 @@ export default function PcSubMenu({
   productSubList,
 }: {
   navSubList: NavItem[]
-  productSubList: NavItem
+  productSubList: any
 }) {
-  const [productNav, setProductNav] = useState<NavItem[]>([])
-
-  useEffect(() => {
-    setProductNav(navSubList)
-  }, [])
-
   return (
     <StyledPcSubMenuWrapper>
       <ul>

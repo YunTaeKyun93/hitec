@@ -76,7 +76,10 @@ export default function Header() {
                       {item.name}
                     </StyledNavItem>
                   </Link>
-                  <PcSubMenu navSubList={item.children} />
+                  <PcSubMenu
+                    navSubList={item.children}
+                    productSubList={filteredProductNav}
+                  />
                 </li>
               ))}
             </ul>
