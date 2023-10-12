@@ -1,13 +1,12 @@
-"use client"
-import GlobalStyles from "@/styles/GlobalStyles"
 import "./globals.css"
 import Providers from "./providers"
-export default function RootLayout(props: React.PropsWithChildren) {
+import Header from "@/layout/header"
+export default async function RootLayout(props: React.PropsWithChildren) {
   return (
     <html>
       <body>
         <Providers>
-          <GlobalStyles />
+          <Header />
           {props.children}
         </Providers>
       </body>

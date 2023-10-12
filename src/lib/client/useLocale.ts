@@ -1,16 +1,14 @@
+"use client"
 import { en } from "@/components/locales/en"
 import { kr } from "@/components/locales/kr"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 
-export const useLocale = () => {
-  const router = useRouter()
-  const { locale } = router
-
+export const useLocale = (locale: string) => {
   if (locale === "ko") {
-    return { locale, text: kr }
+    return { text: kr }
   }
   if (locale === "en") {
-    return { locale, text: en }
+    return { text: en }
   }
-  return { locale, text: kr }
+  return { text: kr }
 }
